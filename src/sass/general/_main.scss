@@ -1,3 +1,7 @@
+* {
+	box-sizing: border-box;
+}
+
 .clearfix {
 	&:after {
 		width: 100%;
@@ -5,4 +9,14 @@
 		clear: both;
 		display: block;
 	}
+}
+
+.wrapper {
+	width: 90%;
+	max-width: 1180px;
+	margin: 0 auto;
+}
+
+.icon {
+	display: table;
 }

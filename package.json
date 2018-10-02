@@ -27,6 +27,7 @@
     "gulp-sass": "^4.0.1",
     "gulp.spritesmith": "^6.9.0",
     "merge-stream": "^1.0.1",
+    "run-sequence": "^2.2.1",
     "vinyl-buffer": "^1.0.1"
   }
 }
