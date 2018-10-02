@@ -58,8 +58,14 @@ gulp.task('icons:sprite:optmization', function() {
 });
 
 gulp.task('html:copy', function() {
-	return gulp.src('./src/**/*.html')
+	return gulp.src('./src/*.html')
 	.pipe(gulp.dest('./dist'))
+	.pipe(connect.reload());
+});
+
+gulp.task('fonts:copy', function() {
+	return gulp.src('./src/fonts/**/*')
+	.pipe(gulp.dest('./dist/css/fonts'))
 	.pipe(connect.reload());
 });
 
@@ -80,14 +86,15 @@ gulp.task('dist:clean', function() {
 
 gulp.task('watch', function() {
 	gulp.watch('./src/js/app.js', ['js']);
-	gulp.watch('./src/**/*.html', ['html:copy']);
+	gulp.watch('./src/*.html', ['html:copy']);
+	gulp.watch('./src/fonts/**/*', ['fonts:copy']);
 	gulp.watch('./src/images/*', ['images:copy:optmization']);
 	gulp.watch('./src/icons/**/*.png', ['icons:sprite:optmization']);
 	gulp.watch('./src/sass/**/*.scss', ['sass']);
 });
 
 gulp.task('build', function() {
-	return runSequence('dist:clean', 'js', 'images:copy:optmization', 'icons:sprite:optmization', 'sass', 'html:copy', function() {
+	return runSequence('dist:clean', 'js', 'images:copy:optmization', 'icons:sprite:optmization', 'sass', 'fonts:copy', 'html:copy', function() {
 		console.log('Finalizou o build');
 	});
 });

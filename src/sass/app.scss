@@ -1,6 +1,10 @@
 @import 'general/main';
+@import 'general/typography';
 
 // COMPONENTS
 @import 'components/banner';
 @import 'components/feature';
 @import 'components/plan';
+
+// LAYOUTS
+@import 'general/layout';

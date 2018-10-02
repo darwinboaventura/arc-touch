@@ -1,5 +1,17 @@
+@import '../general/variables';
+
 * {
+	font: {
+		family: $font1;
+		size: 16px;
+		weight: 400;
+	};
+	color: #848484;
 	box-sizing: border-box;
+}
+
+p {
+	line-height: 1.3em;
 }
 
 .clearfix {
