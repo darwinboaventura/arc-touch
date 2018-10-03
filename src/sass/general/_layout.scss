@@ -87,6 +87,10 @@
 		float: right;
 		border-radius: 10px;
 		overflow: hidden;
+
+		iframe {
+			transform: scale(1.1);
+		}
 	}
 }
 
