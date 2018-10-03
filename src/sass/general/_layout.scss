@@ -1,0 +1,318 @@
+@import '../general/helpers';
+
+.sec-features {
+	padding: 59px 0 (59px-18px);
+	background: #fff;
+	text-align: center;
+
+	&-description {
+		margin: 0 0 56px;
+		line-height: 1.6em;
+	}
+
+	&-list {
+		@extend %set-default-list;
+
+		&-item {
+			width: 33.33%;
+			float: left;
+			position: relative;
+			margin-bottom: 18px;
+
+			.comp-feature {
+				width: 79.658258747%;
+				margin: 0 auto;
+			}
+
+			.border-right {
+				width: 1px;
+				height: 256px;
+				background: #e3e3e3;
+
+				position: absolute;
+				top: 50%;
+				right: 0;
+				transform: translateY(-50%);
+			}
+		}
+
+		&-item:nth-of-type(3n+3) {
+			.border-right {
+				display: none;
+			}
+		}
+	}
+}
+
+.sec-about {
+	padding: 60px 0;
+	background-color: #e7e7e7;
+
+	&-texts {
+		width: (534/1180)*100%;
+		float: left;
+	}
+
+	&-paragraph {
+		line-height: 1.4em;
+		margin: 0 0 28px;
+	}
+
+	&-paragraph:last-of-type {
+		margin-bottom: 0;
+	}
+
+	&-list {
+		@extend %set-default-list;
+		margin-top: 31px;
+		padding-left: 19px;
+
+		&-item {
+			margin-top: 16px;
+			padding-left: 24px;
+			background: url('../images/bullet.png') no-repeat center left;
+		}
+
+		&-item:first-of-type {
+			margin-top: 0;
+		}
+	}
+	
+	&-video {
+		width: (500/1180)*100%;
+		float: right;
+		border-radius: 10px;
+		overflow: hidden;
+
+		iframe {
+			transform: scale(1.1);
+		}
+	}
+}
+
+.sec-testimonials {
+	width: 100%;
+	padding: 60px 0;
+	background: #fff;
+}
+
+.sec-prices {
+	width: 100%;
+	height: 710px;
+	padding: 60px 0 0;
+	text-align: center;
+	border-bottom: 50px solid #fff;
+	background-color: #e7e7e7;
+
+	&-description {
+		padding: 0 80px;
+		margin: 0 0 56px;
+		line-height: 1.8em;
+	}
+
+	&-options {
+		@extend %set-default-list;
+		width: 100%;
+
+		&-item {
+			width: 25%;
+			float: left;
+			border-right: 4px solid #e7e7e7;
+			transition: all 0.5s ease-in-out;
+		}
+
+		&-item:last-of-type {
+			border-right: 0;
+		}
+
+		&-item:hover {
+			border-left: 4px solid #e7e7e7;
+			transform: scale(1.1);
+		}
+	}
+}
+
+.sec-contact {
+	width: 100%;
+	margin-top: -50px;
+	text-align: center;
+	padding: 126px 0 61px;
+	background-color: #fff;
+
+	&-description {
+		margin: 0 0 25px;
+	}
+
+	&-network {
+		@extend %set-default-list;
+		display: table;
+		margin: 0 auto;
+
+		&-item {
+			width: 34px;
+			height: 34px;
+			border-radius: 50%;
+			float: left;
+			margin-left: 10px;
+			position: relative;
+			background: #c5c5c5;
+			transition: all 0.5s ease-in-out;
+
+			.icon {
+				@extend %center-element;
+			}
+		}
+
+		&-item:first-of-type {
+			margin-left: 0;
+		}
+
+		&-item:hover {
+			background: #3498db;
+		}
+	}
+}
+
+.sec-footer {
+	width: 100%;
+	padding: 60px 0;
+	background: #e3e3e3;
+
+	.comp-menu {
+		display: table;
+		margin: 0 auto;
+	}
+}
+
+@media (min-width: 1024px) {
+	.sec-features {
+		&-list {
+			&-item:nth-last-child(-n+3) {
+				.comp-feature {
+					border-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1023px) {
+	.comp-banner {
+		height: auto;
+
+		&-title {
+			margin: 50px 0 20px;
+		}
+
+		&-informations {
+			margin: 0 0 70px;
+		}
+
+		&-description {
+			font-size: 22px;
+
+			br {
+				display: none;
+			}
+		}
+
+		&-image {
+			width: 100%;
+			height: auto;
+
+			img {
+				position: initial;
+				float: right;
+			}
+		}
+	}
+
+	.sec-features {
+		&-list {
+			&-item {
+				width: 100%;
+
+				.border-right {
+					display: none;
+				}
+			}
+
+			&-item:last-of-type {
+				.comp-feature {
+					border-bottom: 0;
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.sec-about {
+		&-texts {
+			width: 100%;
+			margin-bottom: 40px;
+		}
+
+		&-video {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	.sec-testimonials {
+		.comp-carousel {
+			width: 100%;
+			
+			&-list {
+				height: auto;
+	
+				&-item {
+					width: 303.75px;
+		
+					&-main {
+						position: initial;
+						top: 0;
+						left: 0;
+						transform: none;
+					}
+				}
+			}
+		}
+	}
+
+	.sec-prices {
+		height: auto;
+		padding: 60px 0;
+
+		&-description {
+			padding: 0;
+		}
+
+		&-options {
+			&-item {
+				width: 100%;
+				border: 0;
+				margin-top: 40px;
+			}
+
+			&-item:first-of-type {
+				margin-top: 0;
+			}
+		}
+	}
+
+	.sec-footer {
+		.comp-menu {
+			&-item {
+				width: 100%;
+				float: left;
+				clear: both;
+				margin: 15px 0 0;
+				text-align: center;
+			}
+
+			&-item:first-of-type {
+				margin-top: 0;
+			}
+		}
+	}
+}

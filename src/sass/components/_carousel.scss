@@ -1,0 +1,76 @@
+@import '../general/helpers';
+
+.comp-carousel {
+	width: 90%;
+	max-width: 965px;
+	margin: 0 auto;
+	overflow: hidden;
+
+	&-list {
+		@extend %set-default-list;
+		width: 20000em;	
+		height: 129px;
+		position: relative;
+		left: 0;
+		transition: all 0.3s ease-in-out;
+
+		&-item {
+			width: 965px;
+			height: 100%;
+			position: relative;
+			float: left;
+
+			&-main {
+				@extend %center-element;
+				text-align: center;
+				display: table;
+
+				p {
+					font: {
+						size: 24px;
+						weight: 400;
+						style: italic;
+					}
+					color: #848484;
+					line-height: 1.4em;
+					margin: 0 0 26px;
+				}
+
+				h3 {
+					font: {
+						family: $font2;
+						size: 18px;
+						weight: 600;
+					};
+					color: #222222;
+					line-height: 1em;
+					margin: 0;
+				}
+			}
+		}
+	}
+
+	&-bullets {
+		@extend %set-default-list;
+		display: table;
+		margin: 59px auto 0 !important;
+
+		&-item {
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+			float: left;
+			margin-left: 5px;
+			cursor: pointer;
+			border: 2px solid #3498db;
+		}
+
+		&-item:first-of-type {
+			margin-left: 0;
+		}
+
+		&-item.is-active {
+			background: #3498db;
+		}
+	}
+}

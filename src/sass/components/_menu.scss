@@ -1,0 +1,25 @@
+@import '../general/helpers';
+
+.comp-menu {
+	ul {
+		@extend %set-default-list;
+	}
+
+	&-item {
+		float: left;
+		margin-left: 20px;
+
+		a {
+			font: {
+				size: 16px;
+				weight: 400;
+			};
+			color: #848484;
+			text-decoration: none;
+		}
+	}
+
+	&-item:first-of-type {
+		margin-left: 0;
+	}
+}

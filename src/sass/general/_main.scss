@@ -1,0 +1,38 @@
+@import '../general/variables';
+
+* {
+	font: {
+		family: $font1;
+		size: 16px;
+		weight: 400;
+	};
+	color: #848484;
+	box-sizing: border-box;
+}
+
+p {
+	line-height: 1.3em;
+}
+
+.clearfix {
+	&:after {
+		width: 100%;
+		content: '';
+		clear: both;
+		display: block;
+	}
+}
+
+.wrapper {
+	width: 90%;
+	max-width: 1180px;
+	margin: 0 auto;
+}
+
+.icon {
+	display: table;
+}
+
+img {
+	max-width: 100%;
+}
