@@ -10,12 +10,14 @@
 		@extend %set-default-list;
 		width: 20000em;	
 		height: 129px;
+		position: relative;
+		transition: all 0.3s ease-in-out;
 
 		&-item {
 			width: 965px;
 			height: 100%;
 			position: relative;
-			display: inline-block;
+			float: left;
 
 			&-main {
 				@extend %center-element;
