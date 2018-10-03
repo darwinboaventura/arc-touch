@@ -3,9 +3,11 @@
 .sec-features {
 	padding: 59px 0 (59px-18px);
 	background: #fff;
+	text-align: center;
 
-	.sec-title {
-		text-align: center;
+	&-description {
+		margin: 0 0 56px;
+		line-height: 1.6em;
 	}
 
 	&-list {
