@@ -85,5 +85,101 @@
 	&-video {
 		width: (500/1180)*100%;
 		float: right;
+		border-radius: 10px;
+		overflow: hidden;
+	}
+}
+
+.sec-testimonials {
+	width: 100%;
+	padding: 60px 0;
+	background: #fff;
+}
+
+.sec-prices {
+	width: 100%;
+	height: 710px;
+	padding: 60px 0 0;
+	text-align: center;
+	border-bottom: 50px solid #fff;
+	background-color: #e7e7e7;
+
+	&-description {
+		padding: 0 80px;
+		margin: 0 0 56px;
+		line-height: 1.8em;
+	}
+
+	&-options {
+		@extend %set-default-list;
+		width: 100%;
+
+		&-item {
+			width: 25%;
+			float: left;
+			border-right: 4px solid #e7e7e7;
+			transition: all 0.5s ease-in-out;
+		}
+
+		&-item:last-of-type {
+			border-right: 0;
+		}
+
+		&-item:hover {
+			border-left: 4px solid #e7e7e7;
+			transform: scale(1.1);
+		}
+	}
+}
+
+.sec-contact {
+	width: 100%;
+	margin-top: -50px;
+	text-align: center;
+	padding: 126px 0 61px;
+	background-color: #fff;
+
+	&-description {
+		margin: 0 0 25px;
+	}
+
+	&-network {
+		@extend %set-default-list;
+		display: table;
+		margin: 0 auto;
+
+		&-item {
+			width: 34px;
+			height: 34px;
+			border-radius: 50%;
+			float: left;
+			margin-left: 10px;
+			position: relative;
+			background: #c5c5c5;
+			transition: all 0.5s ease-in-out;
+
+			.icon {
+				@extend %center-element;
+			}
+		}
+
+		&-item:first-of-type {
+			margin-left: 0;
+		}
+
+		&-item:hover {
+			background: #3498db;
+		}
+	}
+}
+
+.sec-footer {
+	width: 100%;
+	padding: 60px 0;
+	background: #e3e3e3;
+
+	.comp-menu {
+		display: table;
+		margin: 0 auto;
 	}
 }

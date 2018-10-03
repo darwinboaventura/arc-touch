@@ -2,6 +2,7 @@
 	width: 100%;
 
 	&-title, &-foot {
+		margin: 0;
 		background-color: #3498db;
 	}
 
@@ -22,13 +23,16 @@
 	}
 
 	&-price {
-		font: {
-			family: $font3;
-			weight: 400;
-		}
-		color: #000;
 		display: table;
-		margin: 0 auto;
+		margin: 0 auto 18px;
+
+		strong, small {
+			font: {
+				family: $font3;
+				weight: 400;
+			}
+			color: #000;
+		}
 
 		strong {
 			font-size: 42px;
