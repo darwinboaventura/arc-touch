@@ -6,6 +6,7 @@
 
 - NodeJS
 - NPM
+- Gulp
 
 **How to run this application**
 
