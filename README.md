@@ -1,5 +1,7 @@
 # Arc-touch
 
+![Preview](https://raw.githubusercontent.com/darwinboaventura/arc-touch/development/preview.jpg)
+
 **Requirements**
 
 - NodeJS
