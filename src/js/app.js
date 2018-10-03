@@ -14,8 +14,8 @@ function handleCarousel() {
 	
 	listOfBanners.width(totalWidth);
 
-	let activeBullet = 1;
-	let leftPosition = containerWidth;
+	let activeBullet = 0;
+	let leftPosition = 0;
 
 	function handleBulletActivation(activeBullet) {		
 		$('.comp-carousel-bullets-item').eq(activeBullet).addClass('is-active').siblings('.comp-carousel-bullets-item').removeClass('is-active');
@@ -40,11 +40,11 @@ function handleCarousel() {
 		if ((leftPosition + containerWidth) < totalWidth) {
 			leftPosition += containerWidth;
 		} else {
-			leftPosition = containerWidth;
+			leftPosition = 0;
 		}
 
 		handleBannerActivation(leftPosition);
-		handleBulletActivation((leftPosition / containerWidth) - 1);		
+		handleBulletActivation((leftPosition / containerWidth));		
 	}, 4000);
 
 	handleBulletNavigation();
